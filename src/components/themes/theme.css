@@ -1,0 +1,26 @@
+@theme {
+  --color-ink: #1d2924;
+  --color-muted: #68756e;
+  --color-brand: #27745c;
+  --color-brand-strong: #1c5946;
+  --color-brand-soft: #e8f2ed;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f5f8f6;
+  --color-border: #dfe8e2;
+  --color-focus: #a8d6bc;
+  --color-footer-bg: #e6d7a8;
+  --color-footer-text: #5c3b2e;
+  --color-footer-heading: #17120f;
+  --color-footer-accent: #795339;
+  --radius-control: 6px;
+  --shadow-header: 0 1px 0 rgb(29 41 36 / 8%);
+}
+
+:root {
+  color: var(--color-ink);
+  background: var(--color-surface);
+  font-family: var(--font-body);
+
+  --container-width: 1200px;
+  --page-gutter: clamp(20px, 5vw, 64px);
+}
