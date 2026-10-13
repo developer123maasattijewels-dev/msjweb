@@ -1,0 +1,280 @@
+/* ==========================================================================
+   Maa Satti Jewels - Haute Joaillerie Luxury Styling
+   Inspired by Cartier, Tiffany & Co., Tanishq & Royal Jaipur Heritage
+   ========================================================================== */
+
+:root {
+  --msj-gold: #b89b69;
+  --msj-gold-light: #d6c09b;
+  --msj-gold-dark: #8e7243;
+  --msj-champagne: #f4ede2;
+  --msj-noir: #201b15;
+  --msj-charcoal: #383025;
+  --msj-cream: #faf8f5;
+  --msj-pearl: #f1ede6;
+  --msj-border: #e8dfd2;
+}
+
+/* Base Home wrapper */
+.msj-luxury-home {
+  background-color: var(--msj-cream);
+  color: var(--msj-noir);
+  overflow-x: hidden;
+  font-family: var(--font-body, "DM Sans", sans-serif);
+}
+
+/* Serif Typography */
+.font-serif {
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
+}
+
+.font-display {
+  font-family: var(--font-display, "Cinzel", Georgia, serif);
+}
+
+/* Gold Gradient Shimmer */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #a6844d 0%, #d8be8f 50%, #8e7243 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #c7ad7f 0%, #b89b69 50%, #997c49 100%);
+}
+
+.gold-border-glow:hover {
+  border-color: #b89b69;
+  box-shadow: 0 10px 30px -10px rgba(184, 155, 105, 0.25);
+}
+
+/* Hero Carousel */
+.msj-hero-carousel .slick-dots {
+  bottom: 30px !important;
+}
+
+.msj-hero-carousel .slick-dots li button {
+  background: #ffffff !important;
+  opacity: 0.5;
+  height: 3px !important;
+  width: 28px !important;
+  border-radius: 1px !important;
+  transition: all 0.3s ease !important;
+}
+
+.msj-hero-carousel .slick-dots li.slick-active button {
+  background: #d8c39b !important;
+  opacity: 1 !important;
+  width: 52px !important;
+}
+
+/* Hero Slide */
+.msj-hero-slide {
+  position: relative;
+  min-height: 85vh;
+  display: flex !important;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .msj-hero-slide {
+    min-height: 75vh;
+  }
+}
+
+.msj-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(22, 18, 14, 0.88) 0%,
+    rgba(26, 21, 16, 0.65) 50%,
+    rgba(26, 21, 16, 0.3) 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .msj-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(22, 18, 14, 0.5) 0%,
+      rgba(22, 18, 14, 0.92) 100%
+    );
+  }
+}
+
+/* Category Cards */
+.msj-category-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.msj-category-card:hover {
+  transform: translateY(-6px);
+}
+
+.msj-category-card .category-img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.msj-category-card:hover .category-img {
+  transform: scale(1.08);
+}
+
+/* Product Cards */
+.msj-product-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--msj-border);
+  transition: all 0.35s ease;
+}
+
+.msj-product-card:hover {
+  border-color: #c9b48f;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -12px rgba(45, 36, 24, 0.12);
+}
+
+.msj-product-card .product-img {
+  transition: transform 0.6s ease;
+}
+
+.msj-product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+.msj-product-card .product-overlay-action {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.3s ease;
+}
+
+.msj-product-card:hover .product-overlay-action {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hotspot pulse for Lookbook */
+.hotspot-pin {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #b89b69;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.hotspot-pin::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(184, 155, 105, 0.6);
+  animation: hotspot-ripple 2s infinite ease-out;
+}
+
+@keyframes hotspot-ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.hotspot-pin:hover {
+  transform: scale(1.2);
+  background: #b89b69;
+  color: #ffffff;
+}
+
+/* Ant Design Custom Overrides for Luxury Theme */
+.msj-luxury-tabs .ant-tabs-nav {
+  margin-bottom: 32px !important;
+}
+
+.msj-luxury-tabs .ant-tabs-nav::before {
+  border-bottom: 1px solid var(--msj-border) !important;
+}
+
+.msj-luxury-tabs .ant-tabs-tab {
+  font-size: 14px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  padding: 12px 18px !important;
+  color: #685e50 !important;
+  transition: color 0.3s ease !important;
+}
+
+.msj-luxury-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #9c7f4e !important;
+}
+
+.msj-luxury-tabs .ant-tabs-ink-bar {
+  background: #b89b69 !important;
+  height: 2px !important;
+}
+
+/* Ant Collapse overrides */
+.msj-luxury-collapse .ant-collapse-item {
+  border-bottom: 1px solid var(--msj-border) !important;
+  border-radius: 0 !important;
+}
+
+.msj-luxury-collapse .ant-collapse-header {
+  padding: 20px 0 !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  color: #2b251d !important;
+}
+
+.msj-luxury-collapse .ant-collapse-content-box {
+  padding: 0 0 20px 0 !important;
+  color: #6a6154 !important;
+  line-height: 1.8 !important;
+}
+
+/* Glassmorphism Luxury Panel */
+.glass-luxury-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(226, 215, 197, 0.7);
+}
+
+.glass-dark-panel {
+  background: rgba(32, 27, 21, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(184, 155, 105, 0.25);
+}
+
+/* Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf8f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4c4aa;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b89b69;
+}

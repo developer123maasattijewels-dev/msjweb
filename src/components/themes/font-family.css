@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap");
 
 @theme {
   --font-sans: "DM Sans", sans-serif;
   --font-body: "DM Sans", sans-serif;
-  --font-heading: "DM Sans", sans-serif;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cinzel", Georgia, serif;
   --font-footer: "DM Sans", sans-serif;
-  --font-footer-heading: "DM Sans", sans-serif;
+  --font-footer-heading: "Cormorant Garamond", Georgia, serif;
 }
